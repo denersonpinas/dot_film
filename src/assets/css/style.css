@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* END - RESET */
+
+/* VARIAVEIS */
+:root {
+    --color-bg: #1f1e24;
+    --color-primary: #ff9d01; 
+    --color--secundary: #c4cfde;
+
+    --color-bg-clear: #ecf0f2;
+    --color-primary-clear: #3d3e41;
+    --color-lp-clear: #e3e8ec;
+}
+
+/* PADRÃO */
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    background-color: var(--color-bg);
+}

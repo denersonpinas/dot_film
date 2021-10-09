@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* Setando Media 800px
+ * Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 800px(Tablet, celulares, etc...).
+ */
+@media screen and (max-width: 800px) {
+    
+}
+
+
+/* Setando Media 360px
+ * Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 360px(Tablet, celulares, etc...).
+ */
+@media screen and (max-width: 360px) {
+    
+}

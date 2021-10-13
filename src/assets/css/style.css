@@ -29,6 +29,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
 /* END - RESET */
 
 /* VARIAVEIS */
@@ -204,7 +207,7 @@ body {
 /* END - EDIT HEADER */
 
 /* START - EDIT MAIN */
-main {
+.catalogo, .newslatter {
     padding: 50px 30px 50px 30px;
 }
 
@@ -318,6 +321,101 @@ main {
     color: var(--color-primary);
     padding-right: 5px;
 }
+
+.newslatter {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-image: /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+        #2d313d25,
+        #2d313d25
+    ),
+    /* bottom, image */  url("../image/web/bg-service.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.newslatter div {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newslatter h1 {
+    font-size: 18pt;
+    font-weight: 700;
+    color: #fff;
+}
+
+.newslatter h1 span{
+    color: var(--color-primary);
+}
+
+.newslatter ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.newslatter ul li {
+    cursor: pointer;
+    padding: 5px 5px 5px 15px;
+    color: var(--color-clear);
+    font-weight: 500;
+}
+
+.newslatter ul li:hover {
+    color: var(--color-primary);
+}
+
+.newslatter input {
+    height: 45px;
+    padding: 0px 10px 0px 10px;
+    background-color: var(--color--secundary);
+    color: var(--color-clear);
+    border-radius: 25px 0px 0px 25px;
+    box-shadow: inset 0 0 1rem var(--color-dark);
+}
+
+.newslatter label {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding: 0px 15px 0px 15px;
+    background-color: var(--color--secundary);
+    color: var(--color-clear);
+    border-radius: 0px 25px 25px 0px;
+    box-shadow: inset 0 0 1rem var(--color-dark);
+    list-style: none;
+}
+
+.newslatter hr {
+    width: 100%;
+    height: 1px;
+    margin: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.26);    
+    background-color: transparent;
+}
+
+.newslatter .redes-sociais i {
+    color: var(--color-clear);
+    padding: 15px;
+    margin: 5px;
+    border-radius: 100%;
+    background-color: var(--color--secundary);
+    box-shadow: inset 0 0 1rem var(--color-dark);
+    transition: all .5s;
+}
+
+.redes-sociais i:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1rem var(--color-dark);
+    color: var(--color-primary);
+}
 /* END - EDIT MAIN */
 
 /* START - EDIT FOOTER */
@@ -329,39 +427,11 @@ footer {
     background-color: var(--color--secundary);
 }
 
-footer h1 {
-    font-size: 18pt;
-    font-weight: 700;
-    color: #fff;
-}
-
-footer h1 span{
-    color: var(--color-primary);
-}
-
 footer p {
     color: #fff;
     font-size: 9pt;
     font-weight: 500;
 }
-
-footer ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-footer ul li {
-    cursor: pointer;
-    padding: 5px;
-    color: #fff;
-    font-weight: 700;
-}
-
-footer ul li:hover {
-    color: var(--color-primary);
-}
-
 footer img {
     max-width: 314px;
     height: 29px;

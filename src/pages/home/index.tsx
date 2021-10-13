@@ -133,20 +133,36 @@ export function Home() {
                     </div>
                 </div>                
             </section>
+            <section className="newslatter">
+                <div>
+                    <h1><span>LOCAL</span>FLIX</h1>
+                    <ul>
+                        <li>Sobre</li>
+                        <li>Contato</li>
+                        <li>Politica e Privacidade</li>
+                    </ul>
+                    <div>
+                        <input type="search" name="" id="" /><label htmlFor=""><i id="search" className="fas fa-search"></i></label>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    <ul>
+                        <li>Sobre</li>
+                        <li>Contato</li>
+                        <li>Politica e Privacidade</li>
+                    </ul>
+                    <div className="redes-sociais">
+                        <i className="fab fa-facebook-f"></i>
+                        <i className="fab fa-instagram"></i>
+                        <i className="fab fa-youtube"></i>
+                        <i className="fab fa-whatsapp"></i>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer>
-            <h1><span>LOCAL</span>FLIX</h1>
-            <p>@LOCALFILM, 2020-2021 <br /> Criado por Dênerson Pinas</p>
-            <div>
-                <ul>
-                    <li>Sobre</li>
-                    <li>Contato</li>
-                    <li>Politica e Privacidade</li>
-                </ul>
-                <button>
-                    <i></i>
-                </button>
-            </div>
+        <footer>            
+            <p>@LOCALFILM, 2020-2021 Criado por Dênerson Pinas</p>
             <img src={card_img} alt="Pagamentos" />
         </footer>
         </>

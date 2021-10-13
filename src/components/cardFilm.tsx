@@ -1,48 +1,31 @@
-export function CardFilm() {
+import { ListInfor } from "./listInfor";
+import { Span } from "./span";
+
+type Props = {
+    img:string;
+    title:string;
+    subTitle:string;
+    resolucao:string;
+    duracao:string;
+    like:string;
+    iconprimary:string;
+    iconSecondary:string;
+}
+
+export function CardFilm({img, title, subTitle, resolucao, duracao, like, iconprimary, iconSecondary}:Props) {
     return (
         <>
         <section>
             <div>
+                <img src={img} alt={title} />
                 <div>
-                    <span>8.4</span>
+                    <h1>{title}</h1>
+                    <p>{subTitle}</p>
                 </div>
-                <h1>Homem Aranha</h1>
-                <p>Ação, Ficção</p>
-            </div>
-            <div>
                 <div>
-                    <span>8.4</span>
+                    <Span title={resolucao}/>
+                    <ListInfor title={duracao} subTitle={like} iconPrimary={iconprimary} iconSecondary={iconSecondary}/>
                 </div>
-                <h1>Homem Aranha</h1>
-                <p>Ação, Ficção</p>
-            </div>
-            <div>
-                <div>
-                    <span>8.4</span>
-                </div>
-                <h1>Homem Aranha</h1>
-                <p>Ação, Ficção</p>
-            </div>
-            <div>
-                <div>
-                    <span>8.4</span>
-                </div>
-                <h1>Homem Aranha</h1>
-                <p>Ação, Ficção</p>
-            </div>
-            <div>
-                <div>
-                    <span>8.4</span>
-                </div>
-                <h1>Homem Aranha</h1>
-                <p>Ação, Ficção</p>
-            </div>
-            <div>
-                <div>
-                    <span>8.4</span>
-                </div>
-                <h1>Homem Aranha</h1>
-                <p>Ação, Ficção</p>
             </div>
         </section>
         </>

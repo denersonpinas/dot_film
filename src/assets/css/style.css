@@ -34,16 +34,475 @@ table {
 /* VARIAVEIS */
 :root {
     --color-bg: #1f1e24;
-    --color-primary: #ff9d01; 
-    --color--secundary: #c4cfde;
-
-    --color-bg-clear: #ecf0f2;
-    --color-primary-clear: #3d3e41;
-    --color-lp-clear: #e3e8ec;
+    --color-primary: #e3d804; 
+    --color--secundary: #181d23;
+    --color-clear: #ecf0f2;
+    --color-dark: #02050a;
+    --color-border: #2d313d;
 }
 
 /* PADRÃO */
 body {
     font-family: 'Montserrat', 'sans-serif';
     background-color: var(--color-bg);
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-defult {
+    padding: 15px 10px 15px 10px;
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: var(--color--secundary);
+    border: 3px solid var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+    transition: all .5s;
+}
+
+.btn-defult:hover {
+    background-color: var(--color-primary);
+    color: var(--color--secundary);
+}
+
+.btn-primary {
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--color--secundary);
+    border: 2px solid var(--color-border);
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 500;
+    transition: all .5s;
+}
+
+.btn-primary:active {
+    border: 2px solid var(--color-primary);
+}
+
+/* START - EDIT HEADER */
+.cabecalho {
+    height: 100vh;
+    background-image: url("../image/web/banner-bg.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+/* #nav-menu,  */
+#menu-mobile{
+    display: none;
+}
+
+.menu-web{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    align-items: center;
+    color: #fff;
+}
+
+.menu-web ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-web ul li {
+    cursor: pointer;
+    padding: 15px;
+    font-weight: 700;
+    transition: all .5s;
+}
+
+.menu-web ul li:hover, .menu-web ul li:active {
+    color: var(--color-primary);
+}
+
+.menu-web h1 {
+    font-size: 18pt;
+    font-weight: 700;
+}
+
+.menu-web h1 span{
+    color: var(--color-primary);
+}
+
+.menu-web i{
+    font-size: 18pt;
+}
+
+.menu-web button{
+    margin-left: 15px;
+}
+
+.menu-web i.fa-bars {
+    display: none;
+}
+
+.page-cabecalho {
+    width: 50%;
+    padding: 100px 30px 0px 30px;
+}
+
+.page-cabecalho h6 {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.page-cabecalho h1 {
+    width: 90%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 41pt;
+}
+
+.atrs {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.atrs p, .atrs ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 500;    
+}
+
+.atrs ul li {
+    padding-right: 15px;
+}
+
+.atrs ul li i {
+    color: var(--color-primary);
+    padding-right: 5px;
+}
+
+.atrs span {
+    margin: 5px 0px 15px 5px;
+}
+
+.atr-esp {
+    padding: 2px;
+    background-color: #fff;
+    color: var(--color--secundary);
+    font-weight: 700;      
+}
+
+.atr {
+    padding: 2px;
+    border: 3px solid #fff;
+    color: #fff;
+    font-weight: 700;        
+}
+/* END - EDIT HEADER */
+
+/* START - EDIT MAIN */
+main {
+    padding: 50px 30px 50px 30px;
+}
+
+.catalogo h6 {
+    color: var(--color-clear);
+    font-weight: 700;
+    font-size: 9pt;
+}
+
+.catalogo h1 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 21pt;
+}
+
+.catalogo .content-catalogo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalogo hr {
+    width: 10%;
+    height: 4px;
+    background-color: var(--color-primary);
+}
+
+.catalogo .btn-primary {
+    margin-right: 20px;
+    align-items: center;
+}
+
+.btn-primary hr {
+    width: 1px;
+    height: 15px;
+    margin: 0px 2px 0px 2px;
+    padding: 1px;
+    border-radius: 25px;
+    background-color: var(--color-border);
+}
+
+.btn-primary i {
+    cursor: pointer;
+    padding: 0px 5px 0px 5px;
+}
+
+.btn-primary i:hover {
+    color: var(--color-primary);
+}
+
+.container-film {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-film {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-border);
+}
+
+.content-film img {
+    border-radius: 5px;
+}
+
+.content-film h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14pt;
+}
+
+.content-film p {
+    margin: 5px;
+    color: var(--color-clear);
+    font-weight: 500;
+    font-size: 9pt;
+}
+
+.content-film hr {
+    width: 50%;
+    height: 1px;
+    margin: 5px;    
+    background-color: #000;
+}
+
+.content-film .atr {
+    padding: 2px;
+    margin-right: 5px;
+    background-color: var(--color-dark);
+    color: var(--color-border);
+    border: none;
+    font-size: 9pt;
+    font-weight: 700;        
+}
+
+.content-film ul{
+    color: #fff;
+    font-weight: 500;    
+}
+
+.content-film ul li {
+    padding-right: 15px;
+    font-size: 9pt;
+}
+
+.content-film ul li i {
+    color: var(--color-primary);
+    padding-right: 5px;
+}
+/* END - EDIT MAIN */
+
+/* START - EDIT FOOTER */
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color--secundary);
+}
+
+footer h1 {
+    font-size: 18pt;
+    font-weight: 700;
+    color: #fff;
+}
+
+footer h1 span{
+    color: var(--color-primary);
+}
+
+footer p {
+    color: #fff;
+    font-size: 9pt;
+    font-weight: 500;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer ul li {
+    cursor: pointer;
+    padding: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+
+footer ul li:hover {
+    color: var(--color-primary);
+}
+
+footer img {
+    max-width: 314px;
+    height: 29px;
+}
+/* END - EDIT FOOTER */
+
+
+
+/* Setando Media 360px
+ * Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 360px(Tablet, celulares, etc...).
+ */
+@media screen and (max-width: 280px) {
+    .cabecalho {
+        height: 100vh;
+        background-image: /* top, transparent black, faked with gradient */ 
+        /* linear-gradient(
+        rgba(0, 0, 0, 0.9), 
+        rgba(0, 0, 0, 0.9)
+        ), */
+        /* bottom, image */ url("../image/web/banner-bg.jpg");
+        background-color: #000000;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    /* #nav-menu,  */
+    #btn-logon, 
+    #search,
+    #menu-mobile,
+    #nav-menu {
+        display: none;
+    }
+
+    .menu-web, .menu-mobile {
+        display: flex;
+        padding-top: 15px;
+        color: #fff;
+    }
+
+    .menu-web {
+        justify-content: space-around;
+    }
+
+    .menu-mobile {
+        flex-direction: column;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-mobile ul li {
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .menu-mobile ul hr {
+        border: solid 1px var(--color-lp-clear);
+    }
+
+    .menu-mobile h1, .menu-web h1 {
+        font-size: 18pt;
+        font-weight: 700;
+    }
+
+    .menu-mobile h1 span, .menu-web h1 span {
+        color: var(--color-primary);
+    }
+
+    .menu-mobile i, .menu-web i {
+        font-size: 18pt;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .page-cabecalho {
+        padding: 150px 30px 0px 30px;
+    }
+
+    .page-cabecalho h6 {
+        color: var(--color-primary);
+        font-weight: 700;
+    }
+
+    .page-cabecalho h1 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 25pt;
+    }
+
+    .atrs p, .atrs ul{
+        color: #fff;
+        font-weight: 500;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .atrs ul li i {
+        color: var(--color-primary);
+        padding-right: 5px;
+    }
+
+    .atrs span {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .atr-esp {
+        padding: 2px;
+        background-color: #fff;
+        color: var(--color--secundary);
+        font-weight: 700;        
+    }
+
+    .atr {
+        padding: 2px;
+        border: 3px solid #fff;
+        color: #fff;
+        font-weight: 700;        
+    }
+
+    .btn-defult {
+        padding: 15px 10px 15px 10px;
+        margin-top: 10px;
+        border-radius: 25px;
+        background-color: var(--color--secundary);
+        border: 3px solid var(--color-primary);
+        color: #fff;
+        font-weight: 700;
+        transition: all .5s;
+    }
+
+    .btn-defult:hover {
+        background-color: var(--color-primary);
+        color: var(--color--secundary);
+    }
 }

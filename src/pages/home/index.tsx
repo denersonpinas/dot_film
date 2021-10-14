@@ -1,17 +1,31 @@
 import { Button } from "../../components/button";
-import { Navbar } from "../../components/navbar";
+import { Navbar, NavbarMobile } from "../../components/navbar";
 import poster06 from "../../assets/image/web/poster06.jpg";
 import card_img from "../../assets/image/web/card_img.png";
 
-const changePage = () => {
-    return "comprar()";
-}
-
 export function Home() {
+
+    const changeP = (props:string) => {
+        if (props === 'web') {
+            console.log(props === "web")
+            // document.getElementById("page-cabecalho")?.setAttribute("style", "display:block;");
+            document.getElementById("main")?.setAttribute("style", "display:block;");
+            document.getElementById("footer")?.setAttribute("style", "display:flex;");
+            document.getElementById("menu-mobile")?.setAttribute("style", "display:none;");
+        } else if (props === 'mob') {
+            // document.getElementById("menu-web")?.setAttribute("style", "display:none;");
+            // document.querySelector("page-cabecalho")?.setAttribute("type", "disabled:true;");
+            document.getElementById("main")?.setAttribute("style", "display:none;");
+            document.getElementById("footer")?.setAttribute("style", "display:none;");
+            document.getElementById("menu-mobile")?.setAttribute("style", "display:flex;");
+        }
+    }
+
     return (
         <>
         <header className="cabecalho">
-            <Navbar/>
+            <Navbar onPageChange={changeP}/>
+            <NavbarMobile onPageChange={changeP}/>
             <div className="page-cabecalho" id="page-cabecalho">
                 <div>
                     <h6><span>LOCAL</span>FLIX</h6>
@@ -33,7 +47,7 @@ export function Home() {
                             </ul>
                         </div>                        
                     </div>
-                    <Button title={"ADQUIRA AGORA"} onPageChange={changePage} />
+                    <Button title={"ADQUIRA AGORA"}/>
                 </div>
                 <div>
                 </div>
@@ -41,7 +55,7 @@ export function Home() {
             <div>                
             </div>
         </header>
-        <main>
+        <main id="main">
             <section className="catalogo">
                 <h6>ONLINE STREAMING</h6>
                 <h1>LANÇAMENTOS</h1>
@@ -161,7 +175,7 @@ export function Home() {
                 </div>
             </section>
         </main>
-        <footer>            
+        <footer id="footer">            
             <p>@LOCALFILM, 2020-2021 Criado por Dênerson Pinas</p>
             <img src={card_img} alt="Pagamentos" />
         </footer>

@@ -1,12 +1,11 @@
 type Props = {
     title: String;
-    onPageChange: Function
 }
 
-export function Button({title, onPageChange}: Props) {
+export function Button({title}: Props) {
     return (
         <>
-            <button onClick={() => onPageChange} className="btn-defult">
+            <button className="btn-defult">
                 {title}
             </button> 
         </>

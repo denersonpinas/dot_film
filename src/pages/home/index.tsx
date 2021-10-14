@@ -141,8 +141,8 @@ export function Home() {
                         <li>Contato</li>
                         <li>Politica e Privacidade</li>
                     </ul>
-                    <div>
-                        <input type="search" name="" id="" /><label htmlFor=""><i id="search" className="fas fa-search"></i></label>
+                    <div className="search-input">
+                        <input type="search" name="" id="" /><label htmlFor=""><i className="fas fa-search"></i></label>
                     </div>
                 </div>
                 <hr />

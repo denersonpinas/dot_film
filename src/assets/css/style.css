@@ -96,7 +96,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* #nav-menu,  */
 #menu-mobile{
     display: none;
 }
@@ -269,6 +268,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 5px;
     padding: 20px;
     background-color: var(--color-border);
 }
@@ -440,41 +440,45 @@ footer img {
 
 
 
-/* Setando Media 360px
+/* Setando Media 800px
  * Código abaixo é responsavel por toda responsividade do site em 
- * dispositivos menores de 360px(Tablet, celulares, etc...).
+ * dispositivos menores de 800px(Tablet, celulares, etc...).
  */
-@media screen and (max-width: 280px) {
-    .cabecalho {
-        height: 100vh;
-        background-image: /* top, transparent black, faked with gradient */ 
-        /* linear-gradient(
-        rgba(0, 0, 0, 0.9), 
-        rgba(0, 0, 0, 0.9)
-        ), */
-        /* bottom, image */ url("../image/web/banner-bg.jpg");
-        background-color: #000000;
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-    }
-
+@media screen and (max-width: 800px) {
+    /* START - EDIT HEADER */
     /* #nav-menu,  */
-    #btn-logon, 
-    #search,
+    #btn-logon,
     #menu-mobile,
     #nav-menu {
         display: none;
+    }
+
+    .cabecalho {
+        height: 70vh;
+    }
+
+    .menu-web i.fa-bars {
+        display: block;
+    }
+
+    .menu-web {
+        padding: 0px 20px 0px 20px;
+        justify-content: space-between;
+    }
+
+    .menu-web div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu-web i {
+        padding-right: 35px;
     }
 
     .menu-web, .menu-mobile {
         display: flex;
         padding-top: 15px;
         color: #fff;
-    }
-
-    .menu-web {
-        justify-content: space-around;
     }
 
     .menu-mobile {
@@ -506,73 +510,238 @@ footer img {
     }
 
     .menu-mobile i, .menu-web i {
-        font-size: 18pt;
-    }
-
-    .row {
-        display: flex;
-        justify-content: space-around;
+        font-size: 21pt;
     }
 
     .page-cabecalho {
-        padding: 150px 30px 0px 30px;
+        width: 100%;
+    }
+    /* END - EDIT HEADER */
+
+    /* START - EDIT MAIN */
+    .container-film {
+        flex-wrap: wrap;
     }
 
-    .page-cabecalho h6 {
-        color: var(--color-primary);
-        font-weight: 700;
+    .content-film {
+        width: 40%;
+        margin: 0px 0px 15px 0px;
+    }
+
+    .content-film h1 {
+        font-size: 18pt;
+    }
+    
+    .content-film p {
+        font-size: 11pt;
+    }
+    
+    .content-film ul li {
+        font-size: 11pt;
+    }
+
+    .newslatter div {
+        padding: 10px;
+    }
+    
+    .newslatter ul li {
+        padding-right: 15px;
+    }
+    
+    .newslatter input {
+        height: 45px;
+        padding-left: 10px;
+    }
+
+    .newslatter label i {
+        font-size: 11pt;
+    }
+    /* START - EDIT MAIN */
+}
+
+/* Setando Media 450px
+ * Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 450px(Tablet, celulares, etc...).
+ */
+ @media screen and (max-width: 550px) {
+    /* START - EDIT HEADER */
+    #search {
+        display: none;
+    }
+
+    .cabecalho {
+        height: 70vh;
+    }
+
+    .page-cabecalho {
+        padding: 80px 15px 0px 15px;
+    }
+    
+    .page-cabecalho h1 {
+        font-size: 25pt;
+    }
+    
+    .atrs {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    /* END - EDIT HEADER */
+
+    /* START - EDIT MAIN */
+    .catalogo .content-catalogo, .catalogo .content-catalogo div{
+        flex-wrap: wrap;
+    }
+    
+    .catalogo hr {
+        width: 30%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    .catalogo .btn-primary {
+        margin-right: 5px;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+
+    .container-film {
+        flex-wrap: wrap;
+    }
+
+    .content-film {
+        width: 100%;
+    }
+    
+    .content-film p {
+        font-size: 14pt;
+    }
+    
+    .content-film ul li {
+        font-size: 14pt;
+    }
+
+    .newslatter div {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newslatter .search-input,.newslatter  .redes-sociais {
+        flex-direction: row;
+    }
+    
+    .newslatter h1 {
+        margin-bottom: 15px;
+    }
+    
+    .newslatter ul li {
+        padding: 5px 5px 5px 5px;
+    }
+    /* START - EDIT MAIN */
+
+    /* START - EDIT FOOTER */
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        margin-bottom: 25px;
+    }
+    /* END - EDIT FOOTER */
+}
+
+/* Setando Media 370px
+ * Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 370px(Tablet, celulares, etc...).
+ */
+ @media screen and (max-width: 380px) {
+    /* START - EDIT HEADER */
+    .cabecalho {
+        height: 80vh;
+    }
+
+    .menu-web i{
+        font-size: 14pt;
+    }
+
+    .page-cabecalho {
+        padding: 50px 15px 0px 15px;
+    }
+    /* END - EDIT HEADER */
+
+    /* START - EDIT MAIN */
+    .catalogo {
+        padding: 50px 15px 50px 15px;
+    }
+    
+    .catalogo h6 {
+        font-size: 11pt;
+    }
+    
+    .catalogo .content-catalogo, .catalogo .content-catalogo div{
+        flex-wrap: wrap;
+    }
+    
+    .catalogo hr {
+        width: 30%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    .catalogo .btn-primary {
+        margin-right: 5px;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+    /* START - EDIT MAIN */
+}
+
+/* Setando Media 360px
+ * Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 360px(Tablet, celulares, etc...).
+ */
+@media screen and (max-width: 280px) {
+    /* START - EDIT HEADER */
+    .menu-web {
+        padding: 0px 5px 0px 5px;
+        justify-content: space-between;
     }
 
     .page-cabecalho h1 {
-        color: #fff;
-        font-weight: 700;
-        font-size: 25pt;
+        font-size: 21pt;
+    }
+    /* END - EDIT HEADER */
+
+    /* START - EDIT MAIN */
+    .content-catalogo {
+        padding-bottom: 50px;
     }
 
-    .atrs p, .atrs ul{
-        color: #fff;
-        font-weight: 500;
-        margin-top: 5px;
+    .content-catalogo div {
+        justify-content: space-between;
+    }
+    
+    .catalogo .btn-primary {
         margin-bottom: 5px;
     }
-
-    .atrs ul li i {
-        color: var(--color-primary);
-        padding-right: 5px;
+    
+    .content-film hr {
+        height: 2px;
     }
-
-    .atrs span {
-        margin-top: 5px;
-        margin-bottom: 5px;
+    
+    .content-film .atr {
+        font-size: 9pt;     
     }
-
-    .atr-esp {
-        padding: 2px;
-        background-color: #fff;
-        color: var(--color--secundary);
-        font-weight: 700;        
+    
+    .content-film ul li {
+        font-size: 9pt;
     }
+    /* START - EDIT MAIN */
 
-    .atr {
-        padding: 2px;
-        border: 3px solid #fff;
-        color: #fff;
-        font-weight: 700;        
+    /* START - EDIT FOOTER */
+    footer img {
+        max-width: 240px;
+        height: 22px;
     }
-
-    .btn-defult {
-        padding: 15px 10px 15px 10px;
-        margin-top: 10px;
-        border-radius: 25px;
-        background-color: var(--color--secundary);
-        border: 3px solid var(--color-primary);
-        color: #fff;
-        font-weight: 700;
-        transition: all .5s;
-    }
-
-    .btn-defult:hover {
-        background-color: var(--color-primary);
-        color: var(--color--secundary);
-    }
+    /* END - EDIT FOOTER */
 }

@@ -13,8 +13,8 @@ export function Navbar() {
                 <div>
                     <i id="search" className="fas fa-search"></i>
                     <button id="btn-logon" className="btn-defult">LOGIN/CADASTRAR</button>
-                </div>                
-                <i className="fas fa-bars"></i>
+                    <i className="fas fa-bars"></i>
+                </div>              
             </nav>
         </>
     );

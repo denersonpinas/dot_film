@@ -1,7 +1,7 @@
-import { Button } from "../../components/button";
-import { Navbar, NavbarMobile } from "../../components/navbar";
-import poster06 from "../../assets/image/web/poster06.jpg";
-import card_img from "../../assets/image/web/card_img.png";
+import { Button } from "../../components/Button";
+import { CardFilm } from "../../components/CardFilm";
+import { Footer } from "../../components/Footer";
+import { Navbar, NavbarMobile } from "../../components/Navbar";
 
 export function Home() {
 
@@ -74,78 +74,7 @@ export function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="container-film">
-                    <div className="content-film">
-                        <img src={poster06} alt="Dia da Mulher" />
-                        <h1>Envato Bottle 88</h1>
-                        <p>aventura</p>
-                        <hr/>
-                        <div className="row">
-                            <span className="atr">HD</span>
-                            <span className="atr">PT-BR</span>
-                            <ul className="row">
-                                <li><i className={"fas fa-heart"}></i>3.5</li>
-                                <li><i className={"far fa-clock"}></i>128 min</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="content-film">
-                        <img src={poster06} alt="Dia da Mulher" />
-                        <h1>Envato Bottle 88</h1>
-                        <p>aventura</p>
-                        <hr/>
-                        <div className="row">
-                            <span className="atr">HD</span>
-                            <span className="atr">PT-BR</span>
-                            <ul className="row">
-                                <li><i className={"fas fa-heart"}></i>3.5</li>
-                                <li><i className={"far fa-clock"}></i>128 min</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="content-film">
-                        <img src={poster06} alt="Dia da Mulher" />
-                        <h1>Envato Bottle 88</h1>
-                        <p>aventura</p>
-                        <hr/>
-                        <div className="row">
-                            <span className="atr">HD</span>
-                            <span className="atr">PT-BR</span>
-                            <ul className="row">
-                                <li><i className={"fas fa-heart"}></i>3.5</li>
-                                <li><i className={"far fa-clock"}></i>128 min</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="content-film">
-                        <img src={poster06} alt="Dia da Mulher" />
-                        <h1>Envato Bottle 88</h1>
-                        <p>aventura</p>
-                        <hr/>
-                        <div className="row">
-                            <span className="atr">HD</span>
-                            <span className="atr">PT-BR</span>
-                            <ul className="row">
-                                <li><i className={"fas fa-heart"}></i>3.5</li>
-                                <li><i className={"far fa-clock"}></i>128 min</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="content-film">
-                        <img src={poster06} alt="Dia da Mulher" />
-                        <h1>Envato Bottle 88</h1>
-                        <p>aventura</p>
-                        <hr/>
-                        <div className="row">
-                            <span className="atr">HD</span>
-                            <span className="atr">PT-BR</span>
-                            <ul className="row">
-                                <li><i className={"fas fa-heart"}></i>3.5</li>
-                                <li><i className={"far fa-clock"}></i>128 min</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
+                <CardFilm/>      
             </section>
             <section className="newslatter">
                 <div>
@@ -175,10 +104,7 @@ export function Home() {
                 </div>
             </section>
         </main>
-        <footer id="footer">            
-            <p>@LOCALFILM, 2020-2021 Criado por Dênerson Pinas</p>
-            <img src={card_img} alt="Pagamentos" />
-        </footer>
+        <Footer/>
         </>
     );
 }
